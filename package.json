@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-word-core-chatai",
   "description": "词库引擎，AI回复扩展",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -9,14 +9,26 @@
     "dist"
   ],
   "license": "MIT",
-  "scripts": {},
   "keywords": [
     "chatbot",
     "koishi",
     "plugin"
   ],
-  "devDependencies": {},
   "peerDependencies": {
-    "koishi": "^4.18.7"
+    "koishi": "^4.18.7",
+    "koishi-plugin-word-core": "^1.0.22"
+  },
+  "koishi": {
+    "service": {
+      "required": [
+        "word"
+      ]
+    }
+  },
+  "devDependencies": {
+    "koishi-plugin-word-core": "^1.0.22"
+  },
+  "dependencies": {
+    "openai": "^4.93.0"
   }
 }
